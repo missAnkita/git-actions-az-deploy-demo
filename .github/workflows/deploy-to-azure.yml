@@ -29,7 +29,10 @@ jobs:
        - name: 'Login to Azure'
          uses: azure/login@v1
          with:
-           creds: ${{ secrets.AZURE_CREDENTIALS }}
+           #creds: ${{ secrets.AZURE_CREDENTIALS }}
+           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_538258083C934A38B52CC7A1A43E5596 }}
+           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0AF572FE8BF546F6AE0526DBE8E324CE }}
+           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_97029CF2B84141F5A2C41533DA1C7E9A }}
 
        # Makes source code accessible via $github.workspace
        - name: 'Checking out source code ...'
@@ -99,7 +102,10 @@ jobs:
        - name: 'Login to Azure'
          uses: azure/login@v1
          with:
-           creds: ${{ secrets.AZURE_CREDENTIALS }}
+           #creds: ${{ secrets.AZURE_CREDENTIALS }}
+           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_538258083C934A38B52CC7A1A43E5596 }}
+           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0AF572FE8BF546F6AE0526DBE8E324CE }}
+           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_97029CF2B84141F5A2C41533DA1C7E9A }}
            enable-AzPSSession: true
        
        - name: 'Fetching Azure Functions Publishing Profile'
